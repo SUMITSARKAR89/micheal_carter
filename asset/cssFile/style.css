@@ -1,0 +1,296 @@
+:root{
+     /* background color  */
+     --primary-color: #ffffff;
+     --purple-color: #7030f7;
+     --black-color: #111111;
+
+     --text-black: #111111;
+     --text-white: #ffffff;
+     --text-gray: #6c7179;
+     --text-light: #1f1f1f;
+     
+     
+  
+     /* gradient color  */
+     
+     --gradient-1: linear-gradient(120deg, #7a93b826, #7a93b808);
+     --gradient-2: #7a93b81A;
+     --gradient-3: linear-gradient(360deg, #7a93b826, #7a93b81A);
+     
+    
+     /*others color*/
+     --scrollbar-color: #fff;
+     --scrollbar-thump:#263040;
+     --scrollbar-hover: #6f89b6;
+    
+     /* transition  */
+     --transition-1: 0.25s ease;
+     --transition-2: 0.3s ease;
+     --transition-3: 0.4s ease;
+     
+ 
+      /* fontsize  */
+      --font-h1: 2.813rem;
+      --font-h2: 2.25rem;
+      --font-h3: 4rem;
+      --font-h4:1.5rem;
+      --font-h5: 1.30rem;
+
+
+      --font-24:1.5rem;
+      --font-20: 1.25rem;
+      --font-18: 1.125rem;
+      --font-16: 1rem;
+      --font-15: 0.938rem;
+      
+
+
+      /* font-weight  */
+      --font-bold:700;
+      --font-semi:600;
+      --font-medium:500;
+      --font-regular:400;
+      --font-light:300;
+
+      /* z-index  */
+      --z-minus:-1;
+      --z-zero:0;
+      --z-low:1;
+      --z-high:10;
+      --z-100:100;
+      --z-tooltop:1000;
+      --z-fix:1100;
+      --z-overlay:1110;
+      --z-modal:1990;
+      --z-max:9999;
+
+ 
+     }
+    
+     /* ----------------------------------------
+       ============= reset css  ==============
+       -------------------------------------------*/
+     *,
+     *::after,
+     *::before{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+ 
+     }
+     li{
+         list-style: none;
+     }
+ 
+     a,
+     img,
+     input,
+     button,
+     i{
+         display: block;
+         text-transform: capitalize;
+     }
+     button{
+      background: none;
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      width: fit-content;
+     }
+     .btn{
+        max-width: 100%;
+        width: fit-content;
+       cursor: pointer;
+       text-align: center;
+       transition: 0.3s ease;
+        border-radius: 15px;
+        padding: 10px 25px;
+        text-transform: capitalize;
+        border: 1px solid transparent;
+
+       
+     }
+     .head-btn{
+        background: var(--black-color);
+        color: var(--text-white);
+        font-weight: 600;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     }
+     .head-btn:hover{
+        background: var(--purple-color);
+     }
+    
+
+     a{
+         text-decoration: none;
+     }
+     img{
+         height: auto;
+         max-width: 100%;
+         object-fit: cover;
+     }
+    
+     html{
+         scroll-behavior: smooth;
+        
+     }
+     body{
+         max-width: 100%;
+         height: auto;
+         margin: 0 auto;
+         padding: 0 auto;
+        font-family: "Instrument Sans", sans-serif;
+        font-size: var(--font-16);
+        background: var(--primary-color);
+        color: var(--text-black);
+         position: relative;
+         transition:  all 0.5s ease-in-out;
+         overflow-X: hidden; 
+         animation: fadeed 0.5s ease-in-out;
+     }
+     
+
+      @keyframes fadeed {
+      from{transform: translateY(20px); opacity: 0;}
+      to{transform: translateY(0px); opacity: 1;}
+          
+      }
+       h1{
+      font-size: var(--font-h1);
+     }
+     h2{
+      font-size: var(--font-h2);
+     }
+     h3{
+      font-size: var(--font-h3);
+     }
+     h4{
+      font-size: var(--font-h4);
+     }
+     h5{
+      font-size: var(--font-h5);
+     }
+     h1,h2,h3,h4,h5{
+      font-weight: var(--font-medium);
+     }
+
+     .font-20{
+      font-size: var(--font-20);
+     }
+     .font-18{
+      font-size: var(--font-18);
+     }
+     .font-16{
+      font-size: var(--font-16);
+     }
+     .font-15{
+        font-size: var(--font-15);
+     }
+ 
+     
+     
+    
+     
+ /* ============----page scroll bar-----============== */
+     ::-webkit-scrollbar { 
+         width: 5px; 
+         
+     }
+ 
+     ::-webkit-scrollbar-track { 
+         overflow: hidden;
+         background: transparent;
+
+        
+     }
+ 
+     ::-webkit-scrollbar-thumb {
+    
+     border-radius:100px;
+     background: var(--scrollbar-thump); 
+     transition: 0.3s;
+    
+   }
+   ::-webkit-scrollbar-thumb:hover{
+        opacity: 0.6;
+  
+   }
+ 
+ /* =====================cursor customizing=============== */
+
+ /* =====================others=========================== */
+    .container{
+     max-width: 100%;
+     padding: 0.5% 1% ;
+     margin: 0 5% ;
+     
+    }
+    section{
+     margin: 0% 5% 3%;
+     max-width: 100%;
+    }
+
+    /* <!-- =================================================
+    --------------Header start here------------------
+    =================================================   --> */
+    header{
+        max-width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .head{
+        background:#ffffffbb;
+        backdrop-filter: blur(50px);
+        width: 100%;
+        height: auto;
+        padding: 17px 100px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+       
+        
+        
+    }
+    .head .logo{
+        font-size: var(--font-20);
+        font-weight: 500;
+        color: var(--text-black);
+        transform: scale(1);
+        transition: var(--transition-1);
+    }
+    .head .logo:hover{
+        transform: scale(0.99);
+        color: var(--text-gray);
+    }
+    .head nav{
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        
+    }
+    nav a{
+
+        font-size: var(--font-15);
+        color: var(--text-black);
+        font-weight: 500;
+        margin: 0 5px;
+        transition: color var(--transition-1);
+    }
+    nav:hover a{
+        color:#6c7179ad;
+        
+    }
+    nav a:hover {
+      color: black ;
+    }
+    
+
+    
+
+
+   
