@@ -228,6 +228,7 @@
     section{
      margin: 0% 5% 3%;
      max-width: 100%;
+     position: relative;
     }
 
     /* <!-- =================================================
@@ -243,8 +244,10 @@
         backdrop-filter: blur(50px);
         width: 100%;
         height: auto;
-        padding: 17px 100px;
-        position: relative;
+        padding: 14px 100px 12px;
+        position: fixed;
+        top: 0;
+        left: 0;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -288,6 +291,75 @@
     nav a:hover {
       color: black ;
     }
+
+
+
+
+    /* =================================================
+    --------------main start here------------------
+    ================================================= */
+
+.hero {
+  position: relative;
+  height: 70vh;
+  margin-top: 250px;
+  
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-text {
+  text-align: center;
+ 
+  
+  border-radius: 10px;
+  transform: translateY(0) scale(0.9);
+  opacity: 1;
+  transition: all 2s ease;
+  
+}
+
+.hero-text.show {
+  transform: translateY(0px) scale(1.1);  
+}
+
+.blur-image-wrapper {
+  position: relative;
+  width: 55%;
+  max-width:100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.blur-image {
+  width: 100%;
+  height: auto;
+  display: block;
+
+   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  
+}
+
+.hero-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background:  linear-gradient(to top, rgba(255, 255, 255, 0.349) 60%, rgba(255, 254, 254, 0.295) 80%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* *1536,1280,1024,898,768,600*  */
+@media(max-width:1536){
+
+}
+
+
     
 
     
