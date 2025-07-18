@@ -48,7 +48,7 @@
     <!-- <link rel="stylesheet" href="swiper-bundle.min.css"> -->
 
     <!-- ---scroll reveal js ---------------------------------->
-      <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     
 
@@ -75,6 +75,8 @@
             </div>
 
         </div>
+
+        <!-- --responsive navigator---  -->
         <div class="navigation">
             <div class="navigation-link">
                 <a href="work.html">work</a>
@@ -110,7 +112,7 @@
         </div>
         <div class="hero-right-content">
             <p class="font-16">As a digital product designer with a strong focus on visual design and Framer websites, he collaborates closely with teams to craft seamless, user-centered experiences. A reliable partner in bringing ideas to life</p>
-            <a href="#feature" class="btn head-btn">features</a>
+            <a href="#feature" class="btn custom-btn">features</a>
 
         </div>
         
@@ -120,7 +122,68 @@
     --------------main start here------------------
     =================================================   -->
     <main>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae iste numquam ab ipsam aut doloribus repellat, illo error, corporis voluptates aspernatur blanditiis quod eligendi iusto in doloremque expedita magni. Eos, architecto reprehenderit voluptatem ipsum odit corporis veritatis, praesentium illo nisi nulla adipisci in unde debitis harum quas at quos dolorem fuga minus porro natus cupiditate. Commodi ipsum unde amet, mollitia nostrum aliquam? Debitis in, dolorem error ducimus voluptas fuga! Blanditiis natus accusantium assumenda sequi itaque explicabo, quia, magnam quaerat expedita, quasi ipsam tempora cumque illo neque nisi eius? Impedit sit labore ducimus iste sed asperiores. Fugit necessitatibus rem natus ab.</p>
+
+        <!-- -----------feature section-----------  -->
+       <section id="feature">
+        <div class="container">
+
+            <div class="feature-title">
+                <h2>Featured works</h2>
+                <a href="work.html" class="btn primary-btn">all works <i class="ri-arrow-right-line"></i></a>
+            </div>
+            <div class="feature-container">
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://framerusercontent.com/images/0An7MEBSkTQoOHCavzg1cniIiw.webp?scale-down-to=1024" alt="">
+                    </div>
+                    <div class="feature-info">
+                        <h4>LumeX</h4>
+                        <div class="feature-btn">
+                            <span>SaaS</span>
+                            <span>Dashboard Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://framerusercontent.com/images/78zztBdraLorK1R0rLCLLGkv4.webp?scale-down-to=1024" alt="">
+                    </div>
+                    <div class="feature-info">
+                        <h4>planza</h4>
+                        <div class="feature-btn">
+                            <span>framer website</span>
+                            <span>Dashboard </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://framerusercontent.com/images/VJR2tpvQTbtvxZmeAxF5UHQPx1U.webp?scale-down-to=1024" alt="">
+                    </div>
+                    <div class="feature-info">
+                        <h4>horizon atlas</h4>
+                        <div class="feature-btn">
+                            <span>travel</span>
+                            <span>web design </span>
+                        </div>
+                    </div>
+                </div>
+                 <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://framerusercontent.com/images/6ZIXBcc9PWycPpC8guSUAjopqk.webp?scale-down-to=1024" alt="">
+                    </div>
+                    <div class="feature-info">
+                        <h4>neuroSync</h4>
+                        <div class="feature-btn">
+                            <span>healthcare</span>
+                            <span>mobile app </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       </section>
         
         
 
@@ -133,6 +196,36 @@
     </footer>
 
     <script src="asset/jsfile/main.js"></script>
+     <script>
+        ScrollReveal({
+        reset: true,
+        distance: "60px",
+        duration: 2500,
+        delay: 400
+        });
+
+        ScrollReveal().reveal('.feature-title', {delay: 200, origin: 'top'});
+        ScrollReveal().reveal('.feature-info span', { delay: 200, origin: 'top', interval: 100 });
+
+        ScrollReveal().reveal('.hero-left-content', { delay: 300, origin: 'left' });
+        ScrollReveal().reveal('.feature-title h2', { delay: 200, origin: 'left', interval: 100 });
+        ScrollReveal().reveal('.about-img-badge', { delay: 500, origin: 'left' });
+        
+        ScrollReveal().reveal('.feature-container', {delay: 200, origin: 'bottom'});
+         ScrollReveal().reveal('.feature-card', { delay: 400, origin: 'bottom', interval: 200 });
+
+        ScrollReveal().reveal('.hero-right-content, .feature-info', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('.feature-title a', { delay: 400, origin: 'right', interval: 200 });
+
+      
+
+       
+        
+        
+       
+        
+
+    </script>
     
     
 </body>

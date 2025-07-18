@@ -25,7 +25,7 @@ openIcon.addEventListener("click", () => {
   openIcon.style.display = "none";
   closeIcon.style.display = "block";
   closeIcon.style.color = "red";
-  navigation.style.top = "8%";
+  navigation.style.top = "7%";
 });
 closeIcon.addEventListener("click", () => {
 
