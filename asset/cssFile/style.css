@@ -613,7 +613,12 @@ main{
  /* =================================================
 \--------------main start here------------------
 ================================================= */
-
+#feature,
+#award{
+    position: relative;
+    max-width: 100%;
+    transition: var(--transition-1)
+}
 /* -- -----------feature section-----------  --  */
 .feature-title{
     max-width: 100%;
@@ -721,6 +726,202 @@ main{
     text-transform: capitalize;
 
 }
+
+/* -- -----------award section-----------  --  */
+
+#award{
+    padding: 5px 20px;
+}
+.award-container{
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    transition: var(--transition-1);
+}
+.award-card{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: var(--transition-1);
+    max-width: 100%;
+    height: 530px;
+    padding: 10px;
+   
+   
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    
+}
+.award-card .award-title{
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+
+}
+.award-title i{
+    font-size: var(--font-h2);
+    display: block;
+    margin-top: 10px;
+    color: rgb(241, 178, 2);
+}
+.award-info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+.award-info p{
+    color: var(--text-gray);
+    line-height: 25px;
+}
+.award-img{
+    position: relative;
+    z-index: 2;
+    transform: translateY(0);
+    transition: var(--transition-3);
+    border-radius: 10px;
+
+}
+.award-card:hover .award-img{
+    transform: translateY(-115px);
+    
+    
+
+}
+.award-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.award-img i{
+    position: absolute;
+    top: 20px;
+    border-radius: 30px;
+    right: 10px;
+   
+    padding: 10px;
+    background: var(--text-gray);
+    color: var(--text-white);
+    font-size: var(--font-h4);
+    opacity: 0;
+    transition: var(--transition-1);
+}
+.award-card:hover .award-img i{
+    opacity: 1;
+}
+.award-card:nth-child(2){
+    background: #111111;
+    padding: 10px 25px;
+    box-shadow: rgba(25, 25, 26, 0.493) 0px 7px 29px 0px;
+}
+.award-card .fa-quote-right{
+    font-size: var(--font-h2);
+    color: var(--text-gray);
+    margin-top: 15px;
+    
+}
+.award-card:nth-child(2) h4{
+    color: var(--text-white);
+    margin: 10% 0 40%;
+    font-weight: 700;
+    line-height: 32px;
+}
+.award-card:nth-child(2) .award-founder{
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    
+}
+.award-founder img{
+    width: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.award-founder .award-name{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.award-name p{
+    text-transform: capitalize;
+    color: var(--text-white);
+
+}
+.award-name .font-18{
+    font-weight: 600;
+}
+.award-nam .font-16{
+    opacity: 0.8;
+}
+
+.award-card:nth-child(3){
+    overflow: visible;
+}
+.award-card:nth-child(3):hover .award-top-badge{
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 1;
+    
+}
+.award-top-badge{
+    max-width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #02c543;
+    width: 330px;
+    height: auto;
+    border-radius: 35px;
+    gap: 15px;
+    padding: 4px 15px 4px 5px;
+    z-index: 5;
+    
+    opacity: 0;
+    transition: var(--transition-1);
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+}
+.award-top-badge .award-badge-img{
+    max-width: 100%;
+    display: flex;
+    position: relative;
+}
+.award-badge-img img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+   
+}
+.award-badge-img img:nth-child(2),
+.award-badge-img img:nth-child(4),
+.award-badge-img img:nth-child(3){
+    margin-left: -5px;
+}
+
+.award-top-badge .font-18{
+    color: var(--text-white);
+    font-weight: 600;
+}
+
+
+
+
+
+
 
 
 /* *1536,1280,1024,898,768,600*  */
