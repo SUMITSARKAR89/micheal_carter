@@ -13,7 +13,7 @@
   
      /* gradient color  */
      
-     --gradient-1: linear-gradient(120deg, #7a93b826, #7a93b808);
+     --gradient-1: linear-gradient(120deg,  #7a93b808, #7a93b826);
      --gradient-2: #7a93b81A;
      --gradient-3: linear-gradient(360deg, #7a93b826, #7a93b81A);
      
@@ -298,7 +298,7 @@
         overflow:hidden;
     }
     .head{
-        background:#ffffffbb;
+        background:#ffffff;
         backdrop-filter: blur(50px);
         width: 100%;
         height: auto;
@@ -614,7 +614,8 @@ main{
 \--------------main start here------------------
 ================================================= */
 #feature,
-#award{
+#award,
+#service{
     position: relative;
     max-width: 100%;
     transition: var(--transition-1)
@@ -771,6 +772,24 @@ main{
     display: block;
     margin-top: 10px;
     color: rgb(241, 178, 2);
+    transition: var(--transition-1);
+    animation: twoUpper 2s linear infinite;
+
+}
+@keyframes twoUpper {
+    0%,100%{
+        margin-left: -10px;
+        transition: var(--transition-1);
+        opacity: 0.8;
+    }
+    50%{
+        margin-left: 0;
+        transition: var(--transition-1);
+        opacity: 1;
+    }
+
+    
+    
 }
 .award-info{
     max-width: 100%;
@@ -789,6 +808,7 @@ main{
     transform: translateY(0);
     transition: var(--transition-3);
     border-radius: 10px;
+   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
 }
 .award-card:hover .award-img{
@@ -916,9 +936,301 @@ main{
     color: var(--text-white);
     font-weight: 600;
 }
+.award-card-badge{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: var(--gradient-1);
+    border-radius: 30px;
+}
+.card-badge{
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: rgba(141, 158, 177, 0.685) 0px -5px 70px -10px;
+    background: #ffffffce;
+    border: 1px solid #0000000e;
+    transition: var(--transition-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(30px);
+}
+.card-badge:nth-child(1){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    box-shadow: none;
+   
+    z-index: 3;
+}
+.card-badge:nth-child(2){
+    position: absolute;
+     top: 54%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 310px;
+    
+    z-index: 2;
+}
+.card-badge:nth-child(3){
+     position: absolute;
+     top: 57%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    
+    z-index: 1;
 
+}
+.award-card-badge:hover .card-badge:nth-child(1){
+    top: 35%;
+    
+   
+}
+.award-card-badge:hover .card-badge:nth-child(2){
+    width: 320px;
+}
+.award-card-badge:hover .card-badge:nth-child(3){
+    width: 320px;
+    top: 70%;
+}
+.card-badge p{
+    font-weight: 500;
+}
+.card-badge i{
+    font-size: var(--font-h4);
+    animation: oneUpper 1s linear infinite;
+}
+@keyframes oneUpper {
+    0%,100%{
+        margin-left: -1px;
+        transition: var(--transition-1);
+        opacity: 0.8;
+    }
+    50%{
+        margin-left: 0;
+        transition: var(--transition-1);
+        opacity: 1;
+    }
 
+    
+    
+}
 
+/* ------------service-----------------------------  */
+.service-title{
+
+    max-width: 100%;
+    width: 100%;
+    gap: 50px;
+    margin: 5% 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-title p{
+    width: 30%;
+     padding:0 15px ;
+     text-transform: capitalize;
+     font-weight: 700;
+     color: var(--text-gray);
+     text-align: left;
+}
+.service-title h2{
+    width: 70%;
+    padding:0 15px ;
+    font-weight: 500;
+    text-align: left;
+}
+
+.service-title h2 span{
+    color: var(--text-gray);
+}
+
+.service-container{
+    max-width: 100%;
+    margin: 10% 10px 3%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    transition: var(--transition-1);
+}
+.service-container .service-card{
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 20px;
+    height: 480px;
+    transition: var(--transition-1);
+   
+}
+.service-card:nth-child(2){
+    background: #000;
+}
+.service-card:nth-child(2) .branding-body{
+    background-color: #7030f7;
+}
+.service-card .branding-body{
+    
+    margin:20px auto ;
+    padding: 2px 5px;
+    background: var(--primary-color);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition-1);
+     opacity: 1;
+}
+.service-card:hover .branding-body::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff96;
+    z-index: 2;
+    transition: var(--transition-1);
+    opacity: 0.8;
+
+}
+.service-card:nth-child(2):hover .branding-body:before{
+     position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #11111196;
+    z-index: 2;
+    transition: var(--transition-1);
+    opacity: 0.8;
+    
+}
+.service-card:nth-child(2) .branding-body p{
+    color: var(--text-white);
+}
+.branding-body p{
+    padding: 10px;
+    margin-bottom: 2px;
+    color: var(--text-black);
+    opacity: 0.8;
+    line-height: 25px;
+}
+.branding-body .branding-img{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    align-items: center;
+}
+.branding-img .b-image{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+}
+.b-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.branding-btn{
+    margin-top: 10px;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3px 10px;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+.service-card:nth-child(2) .branding-body .branding-btn span{
+    color: var(--text-white);
+    border: 1px solid var(--text-gray);
+}
+.branding-btn span{
+    display: block;
+    color: var(--text-gray);
+    font-size: var(--font-16);
+    padding: 5px 10px;
+    font-weight: 500;
+    border: 1px solid #00000015;
+    max-width: 100%;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.branding-card{
+    padding: 10px;
+    background: #fff;
+     width: 100%;
+    height: 60px;
+    border-radius: 20px;
+     overflow: hidden;
+    transition: var(--transition-1);
+}
+.service-card:hover .branding-card .branding-tab:nth-child(1){
+    opacity: 0;
+    margin-top: -20%;
+  
+}
+.service-card:hover .branding-card .branding-tab:nth-child(2){
+    opacity: 1;
+   
+    margin-top: 25px;
+}
+.branding-card .branding-tab{
+    max-width: 100%;
+    display: flex;
+    margin-top: 0px ;
+    margin-bottom: 5px ;
+   
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px ;
+   
+    transition: var(--transition-2);
+}
+ .branding-tab p{
+    color: var(--text-black);
+    font-weight: 500;
+    text-transform: capitalize;
+ }
+ .service-card:nth-child(2) .branding-tab p{
+    color: var(--text-white);
+ }
+  .branding-tab i{
+    font-size: var(--font-20);
+    color: #02c543;
+    padding: 5px;
+    background-color:#c9b92834 ;
+    border-radius: 5px;
+  }
+  .service-card:nth-child(2) .branding-tab i{
+    color: var(--text-light);
+    background-color: var(--primary-color);
+  }
+ /* .branding-tab.tab-2{
+   
+    transition: var(--transition-1);
+    display: none;
+    
+ } */
+.service-card:hover  .branding-card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
 
 
 
@@ -935,6 +1247,24 @@ main{
  .feature-info .feature-btn{
    flex-direction: column;
 }
+.award-container,
+.service-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+.award-card{
+    margin-top: 35px;
+    height: 600px;
+}
+.service-card:hover .branding-card .branding-tab:nth-child(2){
+    
+    margin-top: 50px;
+}
+.branding-img .b-image{
+   
+    height: 140px;
+   
+}
+
 }
 @media(max-width:1024px){
     .head-btn{
@@ -984,14 +1314,72 @@ main{
     .blur-image-wrapper {
         width: 70%;
     }
-    .feature-container{
+    .feature-container,
+    .service-container{
         grid-template-columns: 1fr;
 
     }
     .feature-info .feature-btn{
         flex-direction: row;
+    }.branding-img .b-image{
+    
+        height: 200px;
+    
+    }
+    .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 120px;
+        
+    }
+    .service-container .service-card{
+        height: 500px;
     }
    
+}
+@media(max-width:898px){
+    .award-container{
+        grid-template-columns: 1fr;
+    }
+    .award-card:nth-child(1){
+        height: 1000px;
+    }
+    .service-title{
+        flex-direction: column;
+    }.service-title p{
+        width: 100%;
+        padding:0 15px ;
+        text-align: center;
+    }
+    .service-title h2{
+        width: 100%;
+        padding:0 15px ;
+        text-align: center;
+    }
+    .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 95px;
+        
+    }
+    .service-container .service-card{
+        height: 530px;
+    }
+
+}
+@media(max-width:768px){
+    .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 70px;
+        
+    }
+
+}
+@media(max-width:600px){
+     .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 50px;
+        
+    }
+
 }
 
 
