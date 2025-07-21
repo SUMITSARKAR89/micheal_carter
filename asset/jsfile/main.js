@@ -35,3 +35,14 @@ closeIcon.addEventListener("click", () => {
 });
 
 
+
+// --------------faq--------------- 
+const faqContent = document.querySelectorAll('.faq-content');
+
+faqContent.forEach( faqs => {
+    faqs.addEventListener("click", () => {
+        faqs.classList.toggle("active");
+    })
+});
+
+
