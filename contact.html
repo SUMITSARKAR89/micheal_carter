@@ -100,6 +100,40 @@
     =================================================   -->
     <main>
         <!-- -----------feature section-----------  -->
+
+         <section id="contact">
+            <h2><span>Ready to create something amazing? </span>let’s talk!</h2>
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form action="" method="post">
+                            <div class="input-grp">
+                                <label for="name">name</label>
+                                <input type="name" name="text" id="text">
+                            </div>
+                            <div class="input-grp">
+                                <label for="email">email</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="input-grp">
+                                <label for="message">your message</label>
+                                <textarea name="message" id="message" cols="30" rows="7"></textarea>
+                            </div>
+                            <button type="submit">submit</button>
+                        </form>
+                    </div>
+                    <div class="contact-card">
+                        <img src="https://framerusercontent.com/images/dqjhQvgi2H0RHp1ZYDe01B4E8TQ.png?scale-down-to=512" alt="">
+                        <p class="font-20">
+                            <span>Prefer a quick chat?</span>
+                            Let’s hop on a call and explore the best way to bring your ideas to life
+                        </p>
+                        <p class="font-16">approximately 15 minutes</p>
+                        <a href="www.whatapp.com">book a call</a>
+                    </div>
+                </div>
+            </div>
+         </section>
       <!-- ------------------faq sectiomn--------------  -->
         <section id="faq">
             <div class="container">
@@ -230,12 +264,12 @@
 
         ScrollReveal().reveal('.hero-left-content, .service-title p', { delay: 300, origin: 'left' });
         ScrollReveal().reveal('.feature-title h2, c1', { delay: 200, origin: 'left', interval: 100 });
-        ScrollReveal().reveal('.about-img-badge, .footer-left', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.about-img-badge, .footer-left, .contact-form', { delay: 500, origin: 'left' });
         
         ScrollReveal().reveal('.feature-container, .service-container, .faq-container, .foot', {delay: 200, origin: 'bottom'});
          ScrollReveal().reveal('.feature-card, .award-card, .service-card, .faq-content, .background-poster', { delay: 400, origin: 'bottom', interval: 200 });
 
-        ScrollReveal().reveal('.hero-right-content, .feature-info, .service-title h2, .c2', { delay: 300, origin: 'right' });
+        ScrollReveal().reveal('.hero-right-content, .feature-info, .service-title h2, .c2, .contact-card', { delay: 300, origin: 'right' });
         ScrollReveal().reveal('.feature-title a, .footer-right', { delay: 400, origin: 'right', interval: 200 });
 
     </script>

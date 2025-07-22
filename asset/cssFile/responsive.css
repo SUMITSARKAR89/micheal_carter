@@ -1,0 +1,467 @@
+/* *1536,1280,1024,898,768,600  */
+
+
+:root{
+     /* background color  */
+     --primary-color: #ffffff;
+     --purple-color: #7030f7;
+     --black-color: #111111;
+
+     --text-black: #111111;
+     --text-white: #ffffff;
+     --text-gray: #6c7179;
+     --text-light: #1f1f1f;
+     
+     
+  
+     /* gradient color  */
+     
+     --gradient-1: linear-gradient(120deg,  #7a93b808, #7a93b826);
+     --gradient-2: #7a93b81A;
+     --gradient-3: linear-gradient(360deg, #7a93b826, #7a93b81A);
+     
+    
+     /*others color*/
+     --scrollbar-color: #fff;
+     --scrollbar-thump:#263040;
+     --scrollbar-hover: #6f89b6;
+    
+     /* transition  */
+     --transition-1: 0.25s ease;
+     --transition-2: 0.3s ease;
+     --transition-3: 0.4s ease;
+     
+ 
+      /* fontsize  */
+      --font-h1: 2.8rem;
+      --font-h2: 2.25rem;
+      --font-h3: 4rem;
+      --font-h4:1.5rem;
+      --font-h5: 1.30rem;
+
+
+      --font-24:1.5rem;
+      --font-20: 1.25rem;
+      --font-18: 1.125rem;
+      --font-16: 1rem;
+      --font-15: 0.938rem;
+      
+
+
+      /* font-weight  */
+      --font-bold:700;
+      --font-semi:600;
+      --font-medium:500;
+      --font-regular:400;
+      --font-light:300;
+
+      /* z-index  */
+      --z-minus:-1;
+      --z-zero:0;
+      --z-low:1;
+      --z-high:10;
+      --z-100:100;
+      --z-tooltop:1000;
+      --z-fix:1100;
+      --z-overlay:1110;
+      --z-modal:1990;
+      --z-max:9999;
+
+ 
+     }
+@media(max-width:1280px){
+    .hero {
+  
+  height: 50vh;
+  margin-top: 200px;
+  
+ }
+ .feature-info .feature-btn{
+   flex-direction: column;
+}
+.award-container,
+.service-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+.award-card{
+    margin-top: 35px;
+    height: 600px;
+}
+.service-card:hover .branding-card .branding-tab:nth-child(2){
+    
+    margin-top: 50px;
+}
+.branding-img .b-image{
+   
+    height: 140px;
+   
+}
+.footer-container .footer-left{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.footer-left h3{
+    text-align: center;
+}
+.footer-container .footer-right{
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-container{
+    flex-direction: column;
+}
+.about-container .about-left,
+.about-container .about-right{
+    width: 100%;
+
+}
+.cardImage-container .card-img,
+.cardImage-container .card-img2{
+    width: 50%;
+    
+}
+.contact-container .contact-form,
+.contact-container .contact-card{
+    width: 50%;
+    transition: var(--transition-1);
+}
+
+}
+@media(max-width:1024px){
+    :root {
+    --font-h1: 3.2rem;
+    --font-h2: 2.4rem;
+    --font-h3: 2rem;
+    --font-h4: 1.4rem;
+    --font-h5: 1.2rem;
+
+    --font-24: 1.4rem;
+    --font-20: 1.15rem;
+    --font-18: 1rem;
+    --font-16: 0.938rem;
+    --font-15: 0.875rem;
+  }
+  .feature-title{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 25px;
+  }
+    .head-btn{
+        display: none;
+    }
+    .menu-control{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+       
+    }
+    .head nav{
+        display: none;
+    }
+    .hero {
+  
+        height: 60vh;
+        margin-top: 400px;
+  
+    }
+    .hero-left-content{
+   
+        width: 100%;
+        bottom: none;
+        top: 10%;
+        left: 0;
+        padding: 15px 10%;
+        z-index: 4;
+    
+    }
+    .hero-right-content{
+       
+        width: 100%;
+        padding-right: 7.5%;
+       padding: 15px 10%;
+        background: none;
+        backdrop-filter: blur(0px);
+        bottom: none;
+        right: none;
+        top: 36%;
+        left: 0;
+        height: auto;
+        z-index: 2;
+
+    }
+    .blur-image-wrapper {
+        width: 70%;
+    }
+    .feature-container,
+    .service-container,
+    .stack-container{
+        grid-template-columns: 1fr;
+
+    }
+    .feature-title h2{
+        width: 100%;
+    }
+    .feature-info .feature-btn{
+        flex-direction: row;
+    }.branding-img .b-image{
+    
+        height: 200px;
+    
+    }
+    .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 120px;
+        
+    }
+    .service-container .service-card{
+        height: 500px;
+    }
+    .oneSide{
+        width: 500px;
+
+    }
+    .choose-card{
+         width: 80%;
+        left: 0%;
+    }
+.oneSide:nth-child(1){
+   
+    left:10% ;
+}
+.oneSide:nth-child(2){
+   
+    left: 15%;
+    top: 50px;
+    
+}
+.oneSide:nth-child(3){
+    left: 10%;
+    top: 135px;
+}
+.oneSide:nth-child(4){
+    left: 15%;
+    top: 200px ;
+  
+}
+.oneSide:nth-child(5){
+    left: 10%;
+    top: 0px ;
+  
+
+}
+.faq-container{
+    flex-direction: column;
+
+}
+.foot{
+    gap: 10px;
+}
+.about-container{
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition-1);
+}
+.aboutMe-title .font-20{
+    width: 25%;
+    transition: var(--transition-1);
+   
+}
+.aboutMe-title .aboutMe-info{
+    width: 75%;
+    transition: var(--transition-1);
+}
+.cardImage-container .card-img,
+.cardImage-container .card-img2{
+    width: 100%;
+    
+}
+.cardImage-container {
+    flex-direction: column;
+}
+.ex-card{
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    
+}
+.ex-card .font-16{
+    text-align: left;
+   
+}
+.ex-card .font-18{
+    margin-top: 20px;
+    text-align: right;
+}
+#experience h2,
+#stacks h2{
+    text-align: center;
+}
+.contact-container{
+    flex-direction: column;
+
+}
+.contact-container .contact-form,
+.contact-container .contact-card{
+    width: 100%;
+    
+}
+.contact-card a{
+    margin-top: 20%;
+}
+
+
+   
+}
+@media(max-width:898px){
+    :root {
+    --font-h1: 2.8rem;
+    --font-h2: 2.1rem;
+    --font-h3: 1.8rem;
+    --font-h4: 1.3rem;
+    --font-h5: 1.1rem;
+
+    --font-24: 1.25rem;
+    --font-20: 1.1rem;
+    --font-18: 0.95rem;
+    --font-16: 0.875rem;
+    --font-15: 0.85rem;
+  }
+    .award-container{
+        grid-template-columns: 1fr;
+    }
+    .award-card:nth-child(1){
+        height: 1000px;
+    }
+    .service-title{
+        flex-direction: column;
+    }.service-title p{
+        width: 100%;
+        padding:0 15px ;
+        text-align: center;
+    }
+    .service-title h2{
+        width: 100%;
+        padding:0 15px ;
+        text-align: center;
+    }
+    .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 95px;
+        
+    }
+    .service-container .service-card{
+        height: 530px;
+    }
+     .choose-card{
+         width: 70%;
+        
+    }
+    .foot{
+        flex-direction: column;
+        transition: var(--transition-1);
+       
+    }
+    .foot p{
+        text-align: center;
+        transition: var(--transition-1);
+    }
+    .foot .foot-end{
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition-1);
+    }
+    .footer-container .footer-right{
+        width: 100%;
+    }
+    .aboutMe-title .font-20,
+    .aboutMe-title .aboutMe-info{
+        width: 100%;
+    }
+    .aboutMe-title{
+        flex-direction: column;
+        transition: var(--transition-1);
+    }
+    .aboutMe-info h2,
+    .aboutMe-info p{
+        text-align: justify;
+    }
+
+
+}
+@media(max-width:768px){
+    :root {
+    --font-h1: 2.4rem;
+    --font-h2: 1.9rem;
+    --font-h3: 1.6rem;
+    --font-h4: 1.2rem;
+    --font-h5: 1rem;
+
+    --font-24: 1.2rem;
+    --font-20: 1rem;
+    --font-18: 0.875rem;
+    --font-16: 0.85rem;
+    --font-15: 0.813rem;
+  }
+    .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 70px;
+        
+    }.chose-container{
+        
+        height: 60vh;
+        margin-top: 15%;
+    }
+   
+    .faq-card:nth-child(1){
+       
+        justify-content: center;
+        align-items: center;
+    }
+    .faq-card:nth-child(1) h2{
+        text-align: center;
+    }
+    .ex-card{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .ex-card h4,
+    .ex-card .font-16,
+    .ex-card .font-18{
+        text-align: center;
+    }
+
+}
+@media(max-width:600px){
+    :root {
+    --font-h1: 2rem;
+    --font-h2: 1.6rem;
+    --font-h3: 1.4rem;
+    --font-h4: 1.1rem;
+    --font-h5: 0.95rem;
+
+    --font-24: 1.1rem;
+    --font-20: 0.95rem;
+    --font-18: 0.85rem;
+    --font-16: 0.8rem;
+    --font-15: 0.75rem;
+  }
+     .service-card:hover .branding-card .branding-tab:nth-child(2){
+        
+        margin-top: 50px;
+        
+    }
+    .footer-container .footer-right{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .foot .foot-end{
+        flex-direction: column;
+    }
+
+}

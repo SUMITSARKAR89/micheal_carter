@@ -285,7 +285,8 @@
     #aboutMe,
     #aboutImages,
     #experience,
-    #stacks{
+    #stacks,
+    #contact{
         position: relative;
         max-width: 100%;
         transition: var(--transition-1)
@@ -1872,8 +1873,156 @@ footer{
     color: var(--text-white);
 }
 
+/* 
+==================================================
+===================contact HTMl==========================
+================================================ */
 
-/* *1536,1280,1024,898,768,600*  */
+#contact h2{
+    max-width: 100%;
+    width: 100%;
+   font-weight: 600;
+    padding:5% 3.5%;
+    text-align: left;
+}
+#contact h2 span{
+    color: var(--text-gray);
+}
+.contact-container{
+    max-width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 5%;
+    transition: var(--transition-1);
+}
+.contact-container .contact-form{
+    width: 60%;
+    max-width: 100%;
+    background: var(--black-color);
+    max-height: 530px;
+    border-radius: 20px;
+    padding: 25px 20px;
+    box-shadow: rgba(40, 40, 43, 0.692) 0px 7px 29px 0px;
+}
+form{
+    padding: 5px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+.input-grp{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.input-grp label{
+    color: var(--text-white);
+    text-transform: capitalize;
+    font-size: var(--font-16);
+    margin: 3px 2px;
+}
+.input-grp input,
+.input-grp textarea{
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: var(--font-16);
+    background: var(--text-light);
+    color: var(--text-white);
+    font-family: "Instrument Sans", sans-serif;
+    text-transform: lowercase;
+    resize: none;
+}
+
+form button{
+    max-width: 100%;
+    width: 100%;
+    padding: 12px 20px;
+    text-align: center;
+    text-transform: capitalize;
+    background: var(--text-white);
+    color: var(--text-black);
+    border-radius: 10px;
+    font-size: var(--font-20);
+    font-weight: 500;
+    transition: var(--transition-1);
+    margin-top: 10px;
+
+}
+form button:hover{
+    opacity: 0.8;
+
+}
+
+.contact-container .contact-card{
+    width: 40%;
+    max-height: 530px;
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 25px 20px;
+    position: relative;
+}
+.contact-card img{
+    width: 150px;
+    border-radius: 10px;
+    margin-bottom: 35px;
+}
+.contact-card .font-20{
+    margin-bottom: 10px;
+    width: 100%;
+    line-height: 30px;
+    text-align: left;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+.contact-card .font-20 span{
+    
+    color: var(--text-black);
+}
+.contact-card .font-16{
+    max-width: 100%;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 25px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 63%;
+    right: 10%;
+}
+.contact-card a{
+    width: 100%;
+    border: 1px solid #0000001f;
+    margin-top: 30%;
+    margin-bottom: 1%;
+    padding: 12px 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--text-light);
+    text-transform: capitalize;
+    font-size: var(--font-18);
+    font-weight: 500;
+    opacity: 0.9;
+    background: transparent;
+    transition: var(--transition-1);
+}
+.contact-card a:hover{
+    opacity: 1;
+    background: var(--primary-color);
+}
+
+
+/* *1536,1280,1024,898,768,600  */
 @media(max-width:1280px){
     .hero {
   
@@ -1928,9 +2077,27 @@ footer{
     width: 50%;
     
 }
+.contact-container .contact-form,
+.contact-container .contact-card{
+    width: 50%;
+    transition: var(--transition-1);
+}
 
 }
 @media(max-width:1024px){
+    :root {
+    --font-h1: 3.2rem;
+    --font-h2: 2.4rem;
+    --font-h3: 2rem;
+    --font-h4: 1.4rem;
+    --font-h5: 1.2rem;
+
+    --font-24: 1.4rem;
+    --font-20: 1.15rem;
+    --font-18: 1rem;
+    --font-16: 0.938rem;
+    --font-15: 0.875rem;
+  }
     .head-btn{
         display: none;
     }
@@ -2082,11 +2249,36 @@ footer{
 #stacks h2{
     text-align: center;
 }
+.contact-container{
+    flex-direction: column;
+
+}
+.contact-container .contact-form,
+.contact-container .contact-card{
+    width: 100%;
+    
+}
+.contact-card a{
+    margin-top: 20%;
+}
 
 
    
 }
 @media(max-width:898px){
+    :root {
+    --font-h1: 2.8rem;
+    --font-h2: 2.1rem;
+    --font-h3: 1.8rem;
+    --font-h4: 1.3rem;
+    --font-h5: 1.1rem;
+
+    --font-24: 1.25rem;
+    --font-20: 1.1rem;
+    --font-18: 0.95rem;
+    --font-16: 0.875rem;
+    --font-15: 0.85rem;
+  }
     .award-container{
         grid-template-columns: 1fr;
     }
@@ -2150,6 +2342,19 @@ footer{
 
 }
 @media(max-width:768px){
+    :root {
+    --font-h1: 2.4rem;
+    --font-h2: 1.9rem;
+    --font-h3: 1.6rem;
+    --font-h4: 1.2rem;
+    --font-h5: 1rem;
+
+    --font-24: 1.2rem;
+    --font-20: 1rem;
+    --font-18: 0.875rem;
+    --font-16: 0.85rem;
+    --font-15: 0.813rem;
+  }
     .service-card:hover .branding-card .branding-tab:nth-child(2){
         
         margin-top: 70px;
@@ -2181,6 +2386,19 @@ footer{
 
 }
 @media(max-width:600px){
+    :root {
+    --font-h1: 2rem;
+    --font-h2: 1.6rem;
+    --font-h3: 1.4rem;
+    --font-h4: 1.1rem;
+    --font-h5: 0.95rem;
+
+    --font-24: 1.1rem;
+    --font-20: 0.95rem;
+    --font-18: 0.85rem;
+    --font-16: 0.8rem;
+    --font-15: 0.75rem;
+  }
      .service-card:hover .branding-card .branding-tab:nth-child(2){
         
         margin-top: 50px;
