@@ -197,6 +197,9 @@
       font-weight: var(--font-medium);
      }
 
+     .font-24{
+        font-size: var(--font-24);
+     }
      .font-20{
       font-size: var(--font-20);
      }
@@ -273,6 +276,20 @@
         
      }
  /* =====================cursor customizing=============== */
+ /* =====================ID section customizing=============== */
+    #feature,
+    #award,
+    #service,
+    #faq,
+    #about,
+    #aboutMe,
+    #aboutImages,
+    #experience,
+    #stacks{
+        position: relative;
+        max-width: 100%;
+        transition: var(--transition-1)
+    }
 
  /* =====================others=========================== */
     .container{
@@ -613,15 +630,7 @@ main{
  /* =================================================
 \--------------main start here------------------
 ================================================= */
-#feature,
-#award,
-#service,
-#faq,
-#about{
-    position: relative;
-    max-width: 100%;
-    transition: var(--transition-1)
-}
+
 /* -- -----------feature section-----------  --  */
 .feature-title{
     max-width: 100%;
@@ -1720,6 +1729,150 @@ footer{
     border-radius: 30px;
 }
 
+
+
+.aboutMe-title{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+}
+.aboutMe-title .font-20{
+    width: 35%;
+    text-transform: capitalize;
+}
+.aboutMe-title .aboutMe-info{
+    width: 65%;
+}
+.aboutMe-info h2{
+    margin-bottom: 25px;
+}
+.aboutMe-info p{
+    line-height: 35px;
+    color: var(--text-gray);
+}
+
+.cardImage-container{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    transition: var(--transition-1);
+}
+.cardImage-container .card-img{
+    width: 60%;
+    height: 80vh;
+    border-radius: 30px;
+    transition: var(--transition-1);
+}
+.cardImage-container .card-img2{
+    width: 40%;
+    height: 80vh;
+    border-radius: 30px;
+    transition: var(--transition-1);
+}
+.card-img img,
+.card-img2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+
+}
+#experience h2,
+#stacks h2{
+    padding: 0 20px;
+}
+
+.experience-container{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition-1);
+    margin: 5% auto; 
+    padding: 0 20px;
+    gap: 15px;
+}
+.ex-card{
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+   
+}
+.ex-card:nth-child(1){
+    background: var(--purple-color);
+    color: var(--text-white);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.ex-card h4{
+    text-transform: capitalize;
+    width: 100%;
+   
+}
+.ex-card .font-18{
+    text-transform: capitalize;
+    width: 100%;
+    text-align: center;
+}
+.ex-card .font-16{
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.stack-container{
+    max-width: 100%;
+    width: 100%;
+    margin: 5% 0;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    transition: var(--transition-1);
+}
+.stack-card img{
+    width: 50px;
+    border-radius: 8px;
+}
+.stack-container .stack-card{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content:flex-start;
+    align-items: center;
+    border-radius: 15px;
+    padding: 20px 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: var(--transition-1);
+
+}
+.stack-card .stack-info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.stack-info .font-20{
+    font-weight: 500;
+    text-transform: capitalize
+}
+.stack-card:nth-child(1){
+    background: var(--purple-color);
+    color: var(--text-white);
+}
+
+
 /* *1536,1280,1024,898,768,600*  */
 @media(max-width:1280px){
     .hero {
@@ -1764,6 +1917,16 @@ footer{
 }
 .footer-container{
     flex-direction: column;
+}
+.about-container .about-left,
+.about-container .about-right{
+    width: 100%;
+
+}
+.cardImage-container .card-img,
+.cardImage-container .card-img2{
+    width: 50%;
+    
 }
 
 }
@@ -1816,9 +1979,13 @@ footer{
         width: 70%;
     }
     .feature-container,
-    .service-container{
+    .service-container,
+    .stack-container{
         grid-template-columns: 1fr;
 
+    }
+    .feature-title h2{
+        width: 100%;
     }
     .feature-info .feature-btn{
         flex-direction: row;
@@ -1875,6 +2042,46 @@ footer{
 .foot{
     gap: 10px;
 }
+.about-container{
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition-1);
+}
+.aboutMe-title .font-20{
+    width: 25%;
+    transition: var(--transition-1);
+   
+}
+.aboutMe-title .aboutMe-info{
+    width: 75%;
+    transition: var(--transition-1);
+}
+.cardImage-container .card-img,
+.cardImage-container .card-img2{
+    width: 100%;
+    
+}
+.cardImage-container {
+    flex-direction: column;
+}
+.ex-card{
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    
+}
+.ex-card .font-16{
+    text-align: left;
+   
+}
+.ex-card .font-18{
+    margin-top: 20px;
+    text-align: right;
+}
+#experience h2,
+#stacks h2{
+    text-align: center;
+}
 
 
    
@@ -1927,6 +2134,19 @@ footer{
     .footer-container .footer-right{
         width: 100%;
     }
+    .aboutMe-title .font-20,
+    .aboutMe-title .aboutMe-info{
+        width: 100%;
+    }
+    .aboutMe-title{
+        flex-direction: column;
+        transition: var(--transition-1);
+    }
+    .aboutMe-info h2,
+    .aboutMe-info p{
+        text-align: justify;
+    }
+
 
 }
 @media(max-width:768px){
@@ -1946,6 +2166,16 @@ footer{
         align-items: center;
     }
     .faq-card:nth-child(1) h2{
+        text-align: center;
+    }
+    .ex-card{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .ex-card h4,
+    .ex-card .font-16,
+    .ex-card .font-18{
         text-align: center;
     }
 
